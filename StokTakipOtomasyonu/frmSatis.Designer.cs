@@ -59,6 +59,8 @@
             btnSatisIptal = new Button();
             label1 = new Label();
             lblGenelToplam = new Label();
+            button6 = new Button();
+            button7 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -79,6 +81,8 @@
             // panel1
             // 
             panel1.BackColor = Color.DarkGray;
+            panel1.Controls.Add(button7);
+            panel1.Controls.Add(button6);
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
@@ -93,7 +97,7 @@
             // button5
             // 
             button5.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.Location = new Point(1113, 35);
+            button5.Location = new Point(859, 35);
             button5.Name = "button5";
             button5.Size = new Size(155, 62);
             button5.TabIndex = 4;
@@ -103,22 +107,24 @@
             // button4
             // 
             button4.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(794, 35);
+            button4.Location = new Point(625, 35);
             button4.Name = "button4";
             button4.Size = new Size(155, 62);
             button4.TabIndex = 3;
             button4.Text = "Ürün Listeleme";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
             button3.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(633, 35);
+            button3.Location = new Point(464, 35);
             button3.Name = "button3";
             button3.Size = new Size(155, 62);
             button3.TabIndex = 2;
             button3.Text = "Ürün Ekleme";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -129,6 +135,7 @@
             button2.TabIndex = 1;
             button2.Text = "Müşteri Listeleme";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -139,6 +146,7 @@
             button1.TabIndex = 0;
             button1.Text = "Müşteri Ekleme";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // groupBox1
             // 
@@ -356,6 +364,26 @@
             lblGenelToplam.TabIndex = 9;
             lblGenelToplam.Text = "label2";
             // 
+            // button6
+            // 
+            button6.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button6.Location = new Point(1109, 35);
+            button6.Name = "button6";
+            button6.Size = new Size(98, 62);
+            button6.TabIndex = 5;
+            button6.Text = "Kategori";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button7.Location = new Point(1213, 35);
+            button7.Name = "button7";
+            button7.Size = new Size(98, 62);
+            button7.TabIndex = 6;
+            button7.Text = "Marka";
+            button7.UseVisualStyleBackColor = true;
+            // 
             // frmSatis
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -418,5 +446,7 @@
         private Button button1;
         private Label label1;
         private Label lblGenelToplam;
+        private Button button7;
+        private Button button6;
     }
 }

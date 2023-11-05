@@ -289,7 +289,7 @@
             Controls.Add(textBox1);
             Name = "frmÜrünListele";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "\"";
+            Text = "Ürün Listeleme Sayfası";
             Load += frmÜrünListele_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

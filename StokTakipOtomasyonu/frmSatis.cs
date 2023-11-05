@@ -16,5 +16,29 @@ namespace StokTakipOtomasyonu
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmÜrünListele listele = new frmÜrünListele();
+            listele.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmÜrünEkle ekleme = new frmÜrünEkle();
+            ekleme.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmMüşteriListele listele = new frmMüşteriListele();
+            listele.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmÜrünEkle ekleme = new frmÜrünEkle();
+            ekleme.ShowDialog();
+        }
     }
 }
