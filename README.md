@@ -1,0 +1,2 @@
+# StokTakipOtomasyonu
+frontend added
