@@ -29,22 +29,23 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
+            cmbMarka = new ComboBox();
+            cmbKategori = new ComboBox();
+            btnYeniEkle = new Button();
             label7 = new Label();
-            button1 = new Button();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtSatisFiyatı = new TextBox();
+            txtAlisFiyati = new TextBox();
+            txtMiktar = new TextBox();
+            txtUrunAdi = new TextBox();
+            txtBarkodNo = new TextBox();
             groupBox2 = new GroupBox();
+            lblMiktar = new Label();
             button2 = new Button();
             label8 = new Label();
             label9 = new Label();
@@ -53,20 +54,22 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
+            VtxtKategori = new TextBox();
+            VtxtMarka = new TextBox();
+            VtxtSatisFiyati = new TextBox();
+            VtxtAlisFiyati = new TextBox();
+            VtxtMiktar = new TextBox();
+            VtxtUrunAdi = new TextBox();
+            VtxtBarkodNo = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(cmbMarka);
+            groupBox1.Controls.Add(cmbKategori);
+            groupBox1.Controls.Add(btnYeniEkle);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label5);
@@ -74,13 +77,11 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(textBox7);
-            groupBox1.Controls.Add(textBox6);
-            groupBox1.Controls.Add(textBox5);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtSatisFiyatı);
+            groupBox1.Controls.Add(txtAlisFiyati);
+            groupBox1.Controls.Add(txtMiktar);
+            groupBox1.Controls.Add(txtUrunAdi);
+            groupBox1.Controls.Add(txtBarkodNo);
             groupBox1.Location = new Point(53, 74);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(310, 394);
@@ -88,108 +89,32 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Yeni Ürün";
             // 
-            // textBox1
+            // cmbMarka
             // 
-            textBox1.Location = new Point(151, 40);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
+            cmbMarka.FormattingEnabled = true;
+            cmbMarka.Location = new Point(151, 123);
+            cmbMarka.Name = "cmbMarka";
+            cmbMarka.Size = new Size(125, 28);
+            cmbMarka.TabIndex = 15;
             // 
-            // textBox2
+            // cmbKategori
             // 
-            textBox2.Location = new Point(151, 166);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 1;
+            cmbKategori.FormattingEnabled = true;
+            cmbKategori.Location = new Point(151, 81);
+            cmbKategori.Name = "cmbKategori";
+            cmbKategori.Size = new Size(125, 28);
+            cmbKategori.TabIndex = 14;
+            cmbKategori.SelectedIndexChanged += cmbKategori_SelectedIndexChanged;
             // 
-            // textBox3
+            // btnYeniEkle
             // 
-            textBox3.Location = new Point(151, 208);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(151, 250);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(151, 292);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 4;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(151, 124);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 5;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(151, 82);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(125, 27);
-            textBox7.TabIndex = 6;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(19, 47);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 20);
-            label1.TabIndex = 2;
-            label1.Text = "BarkodNo";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(19, 89);
-            label2.Name = "label2";
-            label2.Size = new Size(66, 20);
-            label2.TabIndex = 7;
-            label2.Text = "Kategori";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(19, 131);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 8;
-            label3.Text = "Marka";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(19, 173);
-            label4.Name = "label4";
-            label4.Size = new Size(67, 20);
-            label4.TabIndex = 9;
-            label4.Text = "Ürün Adı";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(19, 215);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 20);
-            label5.TabIndex = 10;
-            label5.Text = "Miktarı";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(19, 257);
-            label6.Name = "label6";
-            label6.Size = new Size(72, 20);
-            label6.TabIndex = 11;
-            label6.Text = "Alış Fiyatı";
+            btnYeniEkle.Location = new Point(182, 343);
+            btnYeniEkle.Name = "btnYeniEkle";
+            btnYeniEkle.Size = new Size(94, 29);
+            btnYeniEkle.TabIndex = 13;
+            btnYeniEkle.Text = "Ekle";
+            btnYeniEkle.UseVisualStyleBackColor = true;
+            btnYeniEkle.Click += btnYeniEkle_Click;
             // 
             // label7
             // 
@@ -200,17 +125,98 @@
             label7.TabIndex = 12;
             label7.Text = "Satış Fiyatı";
             // 
-            // button1
+            // label6
             // 
-            button1.Location = new Point(182, 343);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 13;
-            button1.Text = "Ekle";
-            button1.UseVisualStyleBackColor = true;
+            label6.AutoSize = true;
+            label6.Location = new Point(19, 257);
+            label6.Name = "label6";
+            label6.Size = new Size(72, 20);
+            label6.TabIndex = 11;
+            label6.Text = "Alış Fiyatı";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(19, 215);
+            label5.Name = "label5";
+            label5.Size = new Size(51, 20);
+            label5.TabIndex = 10;
+            label5.Text = "Miktar";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(19, 173);
+            label4.Name = "label4";
+            label4.Size = new Size(67, 20);
+            label4.TabIndex = 9;
+            label4.Text = "Ürün Adı";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(19, 131);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 8;
+            label3.Text = "Marka";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(19, 89);
+            label2.Name = "label2";
+            label2.Size = new Size(66, 20);
+            label2.TabIndex = 7;
+            label2.Text = "Kategori";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(19, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 20);
+            label1.TabIndex = 2;
+            label1.Text = "BarkodNo";
+            // 
+            // txtSatisFiyatı
+            // 
+            txtSatisFiyatı.Location = new Point(151, 288);
+            txtSatisFiyatı.Name = "txtSatisFiyatı";
+            txtSatisFiyatı.Size = new Size(125, 27);
+            txtSatisFiyatı.TabIndex = 4;
+            // 
+            // txtAlisFiyati
+            // 
+            txtAlisFiyati.Location = new Point(151, 247);
+            txtAlisFiyati.Name = "txtAlisFiyati";
+            txtAlisFiyati.Size = new Size(125, 27);
+            txtAlisFiyati.TabIndex = 3;
+            // 
+            // txtMiktar
+            // 
+            txtMiktar.Location = new Point(151, 206);
+            txtMiktar.Name = "txtMiktar";
+            txtMiktar.Size = new Size(125, 27);
+            txtMiktar.TabIndex = 2;
+            // 
+            // txtUrunAdi
+            // 
+            txtUrunAdi.Location = new Point(151, 165);
+            txtUrunAdi.Name = "txtUrunAdi";
+            txtUrunAdi.Size = new Size(125, 27);
+            txtUrunAdi.TabIndex = 1;
+            // 
+            // txtBarkodNo
+            // 
+            txtBarkodNo.Location = new Point(151, 40);
+            txtBarkodNo.Name = "txtBarkodNo";
+            txtBarkodNo.Size = new Size(125, 27);
+            txtBarkodNo.TabIndex = 0;
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(lblMiktar);
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(label9);
@@ -219,19 +225,29 @@
             groupBox2.Controls.Add(label12);
             groupBox2.Controls.Add(label13);
             groupBox2.Controls.Add(label14);
-            groupBox2.Controls.Add(textBox8);
-            groupBox2.Controls.Add(textBox9);
-            groupBox2.Controls.Add(textBox10);
-            groupBox2.Controls.Add(textBox11);
-            groupBox2.Controls.Add(textBox12);
-            groupBox2.Controls.Add(textBox13);
-            groupBox2.Controls.Add(textBox14);
+            groupBox2.Controls.Add(VtxtKategori);
+            groupBox2.Controls.Add(VtxtMarka);
+            groupBox2.Controls.Add(VtxtSatisFiyati);
+            groupBox2.Controls.Add(VtxtAlisFiyati);
+            groupBox2.Controls.Add(VtxtMiktar);
+            groupBox2.Controls.Add(VtxtUrunAdi);
+            groupBox2.Controls.Add(VtxtBarkodNo);
             groupBox2.Location = new Point(454, 74);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(310, 394);
             groupBox2.TabIndex = 14;
             groupBox2.TabStop = false;
             groupBox2.Text = "Var Olan Ürün";
+            // 
+            // lblMiktar
+            // 
+            lblMiktar.AutoSize = true;
+            lblMiktar.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMiktar.Location = new Point(19, 344);
+            lblMiktar.Name = "lblMiktar";
+            lblMiktar.Size = new Size(134, 28);
+            lblMiktar.TabIndex = 14;
+            lblMiktar.Text = "Güncel Miktar";
             // 
             // button2
             // 
@@ -305,54 +321,55 @@
             label14.TabIndex = 2;
             label14.Text = "BarkodNo";
             // 
-            // textBox8
+            // VtxtKategori
             // 
-            textBox8.Location = new Point(151, 82);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(125, 27);
-            textBox8.TabIndex = 6;
+            VtxtKategori.Location = new Point(151, 82);
+            VtxtKategori.Name = "VtxtKategori";
+            VtxtKategori.Size = new Size(125, 27);
+            VtxtKategori.TabIndex = 6;
             // 
-            // textBox9
+            // VtxtMarka
             // 
-            textBox9.Location = new Point(151, 124);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(125, 27);
-            textBox9.TabIndex = 5;
+            VtxtMarka.Location = new Point(151, 124);
+            VtxtMarka.Name = "VtxtMarka";
+            VtxtMarka.Size = new Size(125, 27);
+            VtxtMarka.TabIndex = 5;
             // 
-            // textBox10
+            // VtxtSatisFiyati
             // 
-            textBox10.Location = new Point(151, 292);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(125, 27);
-            textBox10.TabIndex = 4;
+            VtxtSatisFiyati.Location = new Point(151, 292);
+            VtxtSatisFiyati.Name = "VtxtSatisFiyati";
+            VtxtSatisFiyati.Size = new Size(125, 27);
+            VtxtSatisFiyati.TabIndex = 4;
             // 
-            // textBox11
+            // VtxtAlisFiyati
             // 
-            textBox11.Location = new Point(151, 250);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(125, 27);
-            textBox11.TabIndex = 3;
+            VtxtAlisFiyati.Location = new Point(151, 250);
+            VtxtAlisFiyati.Name = "VtxtAlisFiyati";
+            VtxtAlisFiyati.Size = new Size(125, 27);
+            VtxtAlisFiyati.TabIndex = 3;
             // 
-            // textBox12
+            // VtxtMiktar
             // 
-            textBox12.Location = new Point(151, 208);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(125, 27);
-            textBox12.TabIndex = 2;
+            VtxtMiktar.Location = new Point(151, 208);
+            VtxtMiktar.Name = "VtxtMiktar";
+            VtxtMiktar.Size = new Size(125, 27);
+            VtxtMiktar.TabIndex = 2;
             // 
-            // textBox13
+            // VtxtUrunAdi
             // 
-            textBox13.Location = new Point(151, 166);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(125, 27);
-            textBox13.TabIndex = 1;
+            VtxtUrunAdi.Location = new Point(151, 166);
+            VtxtUrunAdi.Name = "VtxtUrunAdi";
+            VtxtUrunAdi.Size = new Size(125, 27);
+            VtxtUrunAdi.TabIndex = 1;
             // 
-            // textBox14
+            // VtxtBarkodNo
             // 
-            textBox14.Location = new Point(151, 40);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(125, 27);
-            textBox14.TabIndex = 0;
+            VtxtBarkodNo.Location = new Point(151, 40);
+            VtxtBarkodNo.Name = "VtxtBarkodNo";
+            VtxtBarkodNo.Size = new Size(125, 27);
+            VtxtBarkodNo.TabIndex = 0;
+            VtxtBarkodNo.TextChanged += VtxtBarkodNo_TextChanged;
             // 
             // frmÜrünEkle
             // 
@@ -365,6 +382,7 @@
             Name = "frmÜrünEkle";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ürün Ekleme Sayfası";
+            Load += frmÜrünEkle_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -375,14 +393,12 @@
         #endregion
 
         private GroupBox groupBox1;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button button1;
+        private TextBox txtSatisFiyatı;
+        private TextBox txtAlisFiyati;
+        private TextBox txtMiktar;
+        private TextBox txtUrunAdi;
+        private TextBox txtBarkodNo;
+        private Button btnYeniEkle;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -399,12 +415,15 @@
         private Label label12;
         private Label label13;
         private Label label14;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox13;
-        private TextBox textBox14;
+        private TextBox VtxtKategori;
+        private TextBox VtxtMarka;
+        private TextBox VtxtSatisFiyati;
+        private TextBox VtxtAlisFiyati;
+        private TextBox VtxtMiktar;
+        private TextBox VtxtUrunAdi;
+        private TextBox VtxtBarkodNo;
+        private ComboBox cmbMarka;
+        private ComboBox cmbKategori;
+        private Label lblMiktar;
     }
 }

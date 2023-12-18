@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txtTC = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            txtEmail = new TextBox();
+            txtAdres = new TextBox();
+            txtTelefon = new TextBox();
+            txtAdSoyad = new TextBox();
             groupBox1 = new GroupBox();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            button1 = new Button();
+            btnEkle = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox1
+            // txtTC
             // 
-            textBox1.Location = new Point(259, 76);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
+            txtTC.Location = new Point(259, 76);
+            txtTC.Name = "txtTC";
+            txtTC.Size = new Size(125, 27);
+            txtTC.TabIndex = 0;
             // 
             // label1
             // 
@@ -59,33 +59,33 @@
             label1.TabIndex = 1;
             label1.Text = "TC";
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(259, 252);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 2;
+            txtEmail.Location = new Point(259, 252);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(125, 27);
+            txtEmail.TabIndex = 2;
             // 
-            // textBox3
+            // txtAdres
             // 
-            textBox3.Location = new Point(259, 208);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 3;
+            txtAdres.Location = new Point(259, 208);
+            txtAdres.Name = "txtAdres";
+            txtAdres.Size = new Size(125, 27);
+            txtAdres.TabIndex = 3;
             // 
-            // textBox4
+            // txtTelefon
             // 
-            textBox4.Location = new Point(259, 164);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 4;
+            txtTelefon.Location = new Point(259, 164);
+            txtTelefon.Name = "txtTelefon";
+            txtTelefon.Size = new Size(125, 27);
+            txtTelefon.TabIndex = 4;
             // 
-            // textBox5
+            // txtAdSoyad
             // 
-            textBox5.Location = new Point(259, 120);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 5;
+            txtAdSoyad.Location = new Point(259, 120);
+            txtAdSoyad.Name = "txtAdSoyad";
+            txtAdSoyad.Size = new Size(125, 27);
+            txtAdSoyad.TabIndex = 5;
             // 
             // groupBox1
             // 
@@ -93,18 +93,18 @@
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(txtEmail);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(textBox5);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(txtAdSoyad);
+            groupBox1.Controls.Add(txtTC);
+            groupBox1.Controls.Add(txtTelefon);
+            groupBox1.Controls.Add(txtAdres);
             groupBox1.Location = new Point(28, 60);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(438, 337);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBox1.Text = "Müşteri Ekleme";
             // 
             // label5
             // 
@@ -142,14 +142,15 @@
             label2.TabIndex = 6;
             label2.Text = "Ad Soyad";
             // 
-            // button1
+            // btnEkle
             // 
-            button1.Location = new Point(213, 431);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 7;
-            button1.Text = "Ekle";
-            button1.UseVisualStyleBackColor = true;
+            btnEkle.Location = new Point(213, 431);
+            btnEkle.Name = "btnEkle";
+            btnEkle.Size = new Size(94, 29);
+            btnEkle.TabIndex = 7;
+            btnEkle.Text = "Ekle";
+            btnEkle.UseVisualStyleBackColor = true;
+            btnEkle.Click += btnEkle_Click;
             // 
             // frmMüşteriEkle
             // 
@@ -157,12 +158,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(495, 506);
-            Controls.Add(button1);
+            Controls.Add(btnEkle);
             Controls.Add(groupBox1);
             Name = "frmMüşteriEkle";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Müşteri Ekleme Sayfası";
-            Load += frmMüşteriEkle_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -170,17 +170,17 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtTC;
         private Label label1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox txtEmail;
+        private TextBox txtAdres;
+        private TextBox txtTelefon;
+        private TextBox txtAdSoyad;
         private GroupBox groupBox1;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
-        private Button button1;
+        private Button btnEkle;
     }
 }

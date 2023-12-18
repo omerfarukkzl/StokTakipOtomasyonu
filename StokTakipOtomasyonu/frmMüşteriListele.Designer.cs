@@ -33,15 +33,15 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txtEmail = new TextBox();
             label1 = new Label();
-            textBox5 = new TextBox();
-            textBox1 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
+            txtAdSoyad = new TextBox();
+            txtTC = new TextBox();
+            txtTelefon = new TextBox();
+            txtAdres = new TextBox();
             txtTcAra = new TextBox();
             btnSil = new Button();
-            btnGüncelle = new Button();
+            btnGuncelle = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -55,6 +55,7 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(674, 316);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // label5
             // 
@@ -96,12 +97,12 @@
             label2.TabIndex = 16;
             label2.Text = "Ad Soyad";
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(104, 293);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 12;
+            txtEmail.Location = new Point(104, 293);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(125, 27);
+            txtEmail.TabIndex = 12;
             // 
             // label1
             // 
@@ -113,33 +114,33 @@
             label1.TabIndex = 11;
             label1.Text = "TC";
             // 
-            // textBox5
+            // txtAdSoyad
             // 
-            textBox5.Location = new Point(104, 161);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 15;
+            txtAdSoyad.Location = new Point(104, 161);
+            txtAdSoyad.Name = "txtAdSoyad";
+            txtAdSoyad.Size = new Size(125, 27);
+            txtAdSoyad.TabIndex = 15;
             // 
-            // textBox1
+            // txtTC
             // 
-            textBox1.Location = new Point(104, 117);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 10;
+            txtTC.Location = new Point(104, 117);
+            txtTC.Name = "txtTC";
+            txtTC.Size = new Size(125, 27);
+            txtTC.TabIndex = 10;
             // 
-            // textBox4
+            // txtTelefon
             // 
-            textBox4.Location = new Point(104, 205);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 14;
+            txtTelefon.Location = new Point(104, 205);
+            txtTelefon.Name = "txtTelefon";
+            txtTelefon.Size = new Size(125, 27);
+            txtTelefon.TabIndex = 14;
             // 
-            // textBox3
+            // txtAdres
             // 
-            textBox3.Location = new Point(104, 249);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 13;
+            txtAdres.Location = new Point(104, 249);
+            txtAdres.Name = "txtAdres";
+            txtAdres.Size = new Size(125, 27);
+            txtAdres.TabIndex = 13;
             // 
             // txtTcAra
             // 
@@ -148,6 +149,7 @@
             txtTcAra.Size = new Size(125, 27);
             txtTcAra.TabIndex = 20;
             txtTcAra.Text = "Tc Ara";
+            txtTcAra.TextChanged += txtTcAra_TextChanged;
             // 
             // btnSil
             // 
@@ -158,16 +160,18 @@
             btnSil.TabIndex = 21;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = true;
+            btnSil.Click += btnSil_Click;
             // 
-            // btnGüncelle
+            // btnGuncelle
             // 
-            btnGüncelle.ForeColor = Color.Black;
-            btnGüncelle.Location = new Point(123, 358);
-            btnGüncelle.Name = "btnGüncelle";
-            btnGüncelle.Size = new Size(94, 29);
-            btnGüncelle.TabIndex = 22;
-            btnGüncelle.Text = "Güncelle";
-            btnGüncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.ForeColor = Color.Black;
+            btnGuncelle.Location = new Point(123, 358);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(94, 29);
+            btnGuncelle.TabIndex = 22;
+            btnGuncelle.Text = "Güncelle";
+            btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // frmMüşteriListele
             // 
@@ -175,24 +179,25 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(1072, 450);
-            Controls.Add(btnGüncelle);
+            Controls.Add(btnGuncelle);
             Controls.Add(btnSil);
             Controls.Add(txtTcAra);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(txtEmail);
             Controls.Add(label1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
+            Controls.Add(txtAdSoyad);
+            Controls.Add(txtTC);
+            Controls.Add(txtTelefon);
+            Controls.Add(txtAdres);
             Controls.Add(dataGridView1);
             ForeColor = Color.BurlyWood;
             Name = "frmMüşteriListele";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Müşteri Listeleme Sayfası";
+            Load += frmMüşteriListele_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -205,14 +210,14 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtEmail;
         private Label label1;
-        private TextBox textBox5;
-        private TextBox textBox1;
-        private TextBox textBox4;
-        private TextBox textBox3;
+        private TextBox txtAdSoyad;
+        private TextBox txtTC;
+        private TextBox txtTelefon;
+        private TextBox txtAdres;
         private TextBox txtTcAra;
         private Button btnSil;
-        private Button btnGüncelle;
+        private Button btnGuncelle;
     }
 }

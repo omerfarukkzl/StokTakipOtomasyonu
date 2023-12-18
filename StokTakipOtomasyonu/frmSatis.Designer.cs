@@ -30,7 +30,9 @@
         {
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
-            button5 = new Button();
+            btnMarkaListele = new Button();
+            btnKategoriListele = new Button();
+            btnSatislariListele = new Button();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -59,8 +61,6 @@
             btnSatisIptal = new Button();
             label1 = new Label();
             lblGenelToplam = new Label();
-            button6 = new Button();
-            button7 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -81,9 +81,9 @@
             // panel1
             // 
             panel1.BackColor = Color.DarkGray;
-            panel1.Controls.Add(button7);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
+            panel1.Controls.Add(btnMarkaListele);
+            panel1.Controls.Add(btnKategoriListele);
+            panel1.Controls.Add(btnSatislariListele);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
@@ -94,15 +94,38 @@
             panel1.Size = new Size(1332, 125);
             panel1.TabIndex = 1;
             // 
-            // button5
+            // btnMarkaListele
             // 
-            button5.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.Location = new Point(859, 35);
-            button5.Name = "button5";
-            button5.Size = new Size(155, 62);
-            button5.TabIndex = 4;
-            button5.Text = "Satışları Listeleme";
-            button5.UseVisualStyleBackColor = true;
+            btnMarkaListele.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMarkaListele.Location = new Point(1213, 35);
+            btnMarkaListele.Name = "btnMarkaListele";
+            btnMarkaListele.Size = new Size(98, 62);
+            btnMarkaListele.TabIndex = 6;
+            btnMarkaListele.Text = "Marka";
+            btnMarkaListele.UseVisualStyleBackColor = true;
+            btnMarkaListele.Click += btnMarkaListele_Click;
+            // 
+            // btnKategoriListele
+            // 
+            btnKategoriListele.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnKategoriListele.Location = new Point(1109, 35);
+            btnKategoriListele.Name = "btnKategoriListele";
+            btnKategoriListele.Size = new Size(98, 62);
+            btnKategoriListele.TabIndex = 5;
+            btnKategoriListele.Text = "Kategori";
+            btnKategoriListele.UseVisualStyleBackColor = true;
+            btnKategoriListele.Click += btnKategoriListele_Click;
+            // 
+            // btnSatislariListele
+            // 
+            btnSatislariListele.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSatislariListele.Location = new Point(859, 35);
+            btnSatislariListele.Name = "btnSatislariListele";
+            btnSatislariListele.Size = new Size(155, 62);
+            btnSatislariListele.TabIndex = 4;
+            btnSatislariListele.Text = "Satışları Listeleme";
+            btnSatislariListele.UseVisualStyleBackColor = true;
+            btnSatislariListele.Click += btnSatislariListele_Click;
             // 
             // button4
             // 
@@ -364,26 +387,6 @@
             lblGenelToplam.TabIndex = 9;
             lblGenelToplam.Text = "label2";
             // 
-            // button6
-            // 
-            button6.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button6.Location = new Point(1109, 35);
-            button6.Name = "button6";
-            button6.Size = new Size(98, 62);
-            button6.TabIndex = 5;
-            button6.Text = "Kategori";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button7.Location = new Point(1213, 35);
-            button7.Name = "button7";
-            button7.Size = new Size(98, 62);
-            button7.TabIndex = 6;
-            button7.Text = "Marka";
-            button7.UseVisualStyleBackColor = true;
-            // 
             // frmSatis
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -439,14 +442,14 @@
         private Button btn_SatısYap;
         private Button btnSil;
         private Button btnSatisIptal;
-        private Button button5;
+        private Button btnSatislariListele;
         private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
         private Label label1;
         private Label lblGenelToplam;
-        private Button button7;
-        private Button button6;
+        private Button btnMarkaListele;
+        private Button btnKategoriListele;
     }
 }

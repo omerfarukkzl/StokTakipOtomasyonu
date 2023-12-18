@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace StokTakipOtomasyonu
 {
     public partial class frmSatis : Form
@@ -25,8 +25,8 @@ namespace StokTakipOtomasyonu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmÜrünEkle ekleme = new frmÜrünEkle();
-            ekleme.ShowDialog();
+            frmMüşteriEkle listele = new frmMüşteriEkle();
+            listele.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,8 +37,26 @@ namespace StokTakipOtomasyonu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmÜrünEkle ekleme = new frmÜrünEkle();
-            ekleme.ShowDialog();
+            frmÜrünEkle listele = new frmÜrünEkle();
+            listele.ShowDialog();
+        }
+
+        private void btnKategoriListele_Click(object sender, EventArgs e)
+        {
+            frmKategori listele = new frmKategori();
+            listele.ShowDialog();
+        }
+
+        private void btnMarkaListele_Click(object sender, EventArgs e)
+        {
+            frmMarka listele = new frmMarka();
+            listele.ShowDialog();
+        }
+
+        private void btnSatislariListele_Click(object sender, EventArgs e)
+        {
+            frmSatislariListele listele = new frmSatislariListele();
+            listele.ShowDialog();
         }
     }
 }
