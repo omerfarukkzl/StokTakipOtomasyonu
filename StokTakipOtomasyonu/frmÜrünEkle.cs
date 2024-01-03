@@ -33,6 +33,23 @@ namespace StokTakipOtomasyonu
             }
             baglanti.Close();
         }
+
+        private void ClearKontrol(Control container)
+        {
+            foreach (Control item in container.Controls)
+            {
+                if (item is TextBox)
+                {
+                    item.Text = "";
+
+                }
+                if (item is ComboBox)
+                {
+                    item.Text = "";
+
+                }
+            }
+        }
         private void MarkaGetir()
         {
             cmbMarka.Items.Clear();
@@ -59,13 +76,13 @@ namespace StokTakipOtomasyonu
             MarkaGetir();
         }
 
-    
+
 
         private void VtxtBarkodNo_TextChanged(object sender, EventArgs e)
         {
             if (VtxtBarkodNo.Text == "")
             {
-                lblMiktar.Text = "Güncel Stok:";
+                lblMiktar.Text = "Güncel Miktar: ";
                 foreach (Control item in groupBox2.Controls)
                 {
                     if (item is TextBox)
@@ -82,10 +99,10 @@ namespace StokTakipOtomasyonu
                 VtxtKategori.Text = reader["kategori"].ToString();
                 VtxtMarka.Text = reader["marka"].ToString();
                 VtxtUrunAdi.Text = reader["urunadi"].ToString();
-                VtxtMiktar.Text = reader["miktar"].ToString();
+                lblMiktar.Text = "Güncel Miktar: " + reader["miktar"].ToString();
                 VtxtAlisFiyati.Text = reader["alisfiyat"].ToString();
                 VtxtSatisFiyati.Text = reader["satisfiyat"].ToString();
-                
+
             }
             baglanti.Close();
 
@@ -96,7 +113,7 @@ namespace StokTakipOtomasyonu
             Proje.Stok.Urunler entity = new Proje.Stok.Urunler();
             entity.BarkodNo = txtBarkodNo.Text;
             entity.KategoriAd = cmbKategori.Text;
-            entity.MarkaAd = cmbKategori.Text;
+            entity.MarkaAd = cmbMarka.Text;
             entity.UrunAdi = txtUrunAdi.Text;
             entity.Miktar = int.Parse(txtMiktar.Text);
             entity.AlisFiyati = decimal.Parse(txtAlisFiyati.Text);
@@ -107,6 +124,7 @@ namespace StokTakipOtomasyonu
 
             MessageBox.Show("Ürün Eklendi.");
             cmbMarka.Items.Clear();
+
             foreach (Control item in groupBox1.Controls)
             {
                 if (item is TextBox)
@@ -121,6 +139,20 @@ namespace StokTakipOtomasyonu
                 }
 
             }
+
+        }
+
+        private void btnEkleVarOlan_Click(object sender, EventArgs e)
+        {
+            Proje.Stok.Urunler entity = new Proje.Stok.Urunler();
+
+            
+            entity.VarOlanUrunEkleDB(int.Parse(VtxtMiktar.Text), VtxtBarkodNo.Text);
+
+            
+            
+            MessageBox.Show("Var olan ürüne ekleme yapıldı.");
+            
 
         }
     }

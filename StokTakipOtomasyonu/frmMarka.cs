@@ -47,7 +47,10 @@ namespace StokTakipOtomasyonu
             entity.MarkaAd = txtMarka.Text;
             entity.KategoriAd = cmbKategoriSec.Text;
 
-            entity.MarkaEke(entity.MarkaAd, entity.KategoriAd);
+            IMarka m1 = (IMarka)entity; 
+
+
+            m1.MarkaEke(entity.MarkaAd, entity.KategoriAd);
 
             txtMarka.Text = "";
             cmbKategoriSec.Text = "";

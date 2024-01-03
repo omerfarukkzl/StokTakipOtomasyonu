@@ -16,6 +16,18 @@ namespace StokTakipOtomasyonu
         {
             InitializeComponent();
         }
+        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-OFK;Initial Catalog=Stok_Takip;Integrated Security=True;Encrypt=False");
+        DataSet daset = new DataSet();
+        private void sepetListele()
+        {
+            baglanti.Open();
+            SqlDataAdapter adtr = new SqlDataAdapter("select *from sepet", baglanti);
+            adtr.Fill(daset, "sepet");
+            dataGridView1.DataSource = daset.Tables["sepet"];
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -57,6 +69,20 @@ namespace StokTakipOtomasyonu
         {
             frmSatislariListele listele = new frmSatislariListele();
             listele.ShowDialog();
+        }
+
+        private void frmSatis_Load(object sender, EventArgs e)
+        {
+            sepetListele();
+        }
+
+        private void txtTC_TextChanged(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select *from müşteri where TcNo like '"+txtTC.Text+"'",baglanti);
+            SqlDataReader reader = komut.ExecuteReader();
+            
+
         }
     }
 }

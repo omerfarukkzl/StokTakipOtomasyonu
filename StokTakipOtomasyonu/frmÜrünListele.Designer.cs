@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnGuncelle = new Button();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -36,33 +36,34 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtKategori = new TextBox();
+            txtMarka = new TextBox();
+            txtSatisFiyat = new TextBox();
+            txtAlisFiyat = new TextBox();
+            txtMiktar = new TextBox();
+            txtUrunAdi = new TextBox();
+            txtBarkodNo = new TextBox();
             dataGridView1 = new DataGridView();
-            button2 = new Button();
-            textBox8 = new TextBox();
+            btnSil = new Button();
+            txtAra = new TextBox();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            button3 = new Button();
+            cmbKategori = new ComboBox();
+            cmbMarka = new ComboBox();
+            btnMarkaGuncelle = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnGuncelle
             // 
-            button1.Location = new Point(202, 409);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 28;
-            button1.Text = "Güncelle";
-            button1.UseVisualStyleBackColor = true;
+            btnGuncelle.Location = new Point(202, 409);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(94, 29);
+            btnGuncelle.TabIndex = 28;
+            btnGuncelle.Text = "Güncelle";
+            btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // label7
             // 
@@ -127,56 +128,56 @@
             label1.TabIndex = 16;
             label1.Text = "BarkodNo";
             // 
-            // textBox7
+            // txtKategori
             // 
-            textBox7.Location = new Point(171, 148);
-            textBox7.Name = "textBox7";
-            textBox7.ReadOnly = true;
-            textBox7.Size = new Size(125, 27);
-            textBox7.TabIndex = 21;
+            txtKategori.Location = new Point(171, 148);
+            txtKategori.Name = "txtKategori";
+            txtKategori.ReadOnly = true;
+            txtKategori.Size = new Size(125, 27);
+            txtKategori.TabIndex = 21;
             // 
-            // textBox6
+            // txtMarka
             // 
-            textBox6.Location = new Point(171, 190);
-            textBox6.Name = "textBox6";
-            textBox6.ReadOnly = true;
-            textBox6.Size = new Size(125, 27);
-            textBox6.TabIndex = 20;
+            txtMarka.Location = new Point(171, 190);
+            txtMarka.Name = "txtMarka";
+            txtMarka.ReadOnly = true;
+            txtMarka.Size = new Size(125, 27);
+            txtMarka.TabIndex = 20;
             // 
-            // textBox5
+            // txtSatisFiyat
             // 
-            textBox5.Location = new Point(171, 358);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(125, 27);
-            textBox5.TabIndex = 19;
+            txtSatisFiyat.Location = new Point(171, 358);
+            txtSatisFiyat.Name = "txtSatisFiyat";
+            txtSatisFiyat.Size = new Size(125, 27);
+            txtSatisFiyat.TabIndex = 19;
             // 
-            // textBox4
+            // txtAlisFiyat
             // 
-            textBox4.Location = new Point(171, 316);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(125, 27);
-            textBox4.TabIndex = 18;
+            txtAlisFiyat.Location = new Point(171, 316);
+            txtAlisFiyat.Name = "txtAlisFiyat";
+            txtAlisFiyat.Size = new Size(125, 27);
+            txtAlisFiyat.TabIndex = 18;
             // 
-            // textBox3
+            // txtMiktar
             // 
-            textBox3.Location = new Point(171, 274);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 17;
+            txtMiktar.Location = new Point(171, 274);
+            txtMiktar.Name = "txtMiktar";
+            txtMiktar.Size = new Size(125, 27);
+            txtMiktar.TabIndex = 17;
             // 
-            // textBox2
+            // txtUrunAdi
             // 
-            textBox2.Location = new Point(171, 232);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 15;
+            txtUrunAdi.Location = new Point(171, 232);
+            txtUrunAdi.Name = "txtUrunAdi";
+            txtUrunAdi.Size = new Size(125, 27);
+            txtUrunAdi.TabIndex = 15;
             // 
-            // textBox1
+            // txtBarkodNo
             // 
-            textBox1.Location = new Point(171, 106);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 14;
+            txtBarkodNo.Location = new Point(171, 106);
+            txtBarkodNo.Name = "txtBarkodNo";
+            txtBarkodNo.Size = new Size(125, 27);
+            txtBarkodNo.TabIndex = 14;
             // 
             // dataGridView1
             // 
@@ -188,22 +189,25 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(697, 394);
             dataGridView1.TabIndex = 29;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
-            // button2
+            // btnSil
             // 
-            button2.Location = new Point(1074, 75);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 30;
-            button2.Text = "Sil";
-            button2.UseVisualStyleBackColor = true;
+            btnSil.Location = new Point(1074, 75);
+            btnSil.Name = "btnSil";
+            btnSil.Size = new Size(94, 29);
+            btnSil.TabIndex = 30;
+            btnSil.Text = "Sil";
+            btnSil.UseVisualStyleBackColor = true;
+            btnSil.Click += btnSil_Click;
             // 
-            // textBox8
+            // txtAra
             // 
-            textBox8.Location = new Point(698, 24);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(125, 27);
-            textBox8.TabIndex = 31;
+            txtAra.Location = new Point(698, 24);
+            txtAra.Name = "txtAra";
+            txtAra.Size = new Size(125, 27);
+            txtAra.TabIndex = 31;
+            txtAra.TextChanged += txtAra_TextChanged;
             // 
             // label8
             // 
@@ -232,30 +236,32 @@
             label10.TabIndex = 36;
             label10.Text = "Marka";
             // 
-            // comboBox1
+            // cmbKategori
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(570, 497);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 37;
+            cmbKategori.FormattingEnabled = true;
+            cmbKategori.Location = new Point(570, 497);
+            cmbKategori.Name = "cmbKategori";
+            cmbKategori.Size = new Size(151, 28);
+            cmbKategori.TabIndex = 37;
+            cmbKategori.SelectedIndexChanged += cmbKategori_SelectedIndexChanged;
             // 
-            // comboBox2
+            // cmbMarka
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(570, 539);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 28);
-            comboBox2.TabIndex = 38;
+            cmbMarka.FormattingEnabled = true;
+            cmbMarka.Location = new Point(570, 539);
+            cmbMarka.Name = "cmbMarka";
+            cmbMarka.Size = new Size(151, 28);
+            cmbMarka.TabIndex = 38;
             // 
-            // button3
+            // btnMarkaGuncelle
             // 
-            button3.Location = new Point(737, 500);
-            button3.Name = "button3";
-            button3.Size = new Size(104, 62);
-            button3.TabIndex = 39;
-            button3.Text = "Güncelle";
-            button3.UseVisualStyleBackColor = true;
+            btnMarkaGuncelle.Location = new Point(737, 500);
+            btnMarkaGuncelle.Name = "btnMarkaGuncelle";
+            btnMarkaGuncelle.Size = new Size(104, 62);
+            btnMarkaGuncelle.TabIndex = 39;
+            btnMarkaGuncelle.Text = "Marka Güncelle";
+            btnMarkaGuncelle.UseVisualStyleBackColor = true;
+            btnMarkaGuncelle.Click += btnMarkaGuncelle_Click;
             // 
             // frmÜrünListele
             // 
@@ -263,16 +269,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(1186, 593);
-            Controls.Add(button3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(btnMarkaGuncelle);
+            Controls.Add(cmbMarka);
+            Controls.Add(cmbKategori);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox8);
-            Controls.Add(button2);
+            Controls.Add(txtAra);
+            Controls.Add(btnSil);
             Controls.Add(dataGridView1);
-            Controls.Add(button1);
+            Controls.Add(btnGuncelle);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -280,13 +286,13 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtKategori);
+            Controls.Add(txtMarka);
+            Controls.Add(txtSatisFiyat);
+            Controls.Add(txtAlisFiyat);
+            Controls.Add(txtMiktar);
+            Controls.Add(txtUrunAdi);
+            Controls.Add(txtBarkodNo);
             Name = "frmÜrünListele";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ürün Listeleme Sayfası";
@@ -298,7 +304,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnGuncelle;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -306,21 +312,21 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtKategori;
+        private TextBox txtMarka;
+        private TextBox txtSatisFiyat;
+        private TextBox txtAlisFiyat;
+        private TextBox txtMiktar;
+        private TextBox txtUrunAdi;
+        private TextBox txtBarkodNo;
         private DataGridView dataGridView1;
-        private Button button2;
-        private TextBox textBox8;
+        private Button btnSil;
+        private TextBox txtAra;
         private Label label8;
         private Label label9;
         private Label label10;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private Button button3;
+        private ComboBox cmbKategori;
+        private ComboBox cmbMarka;
+        private Button btnMarkaGuncelle;
     }
 }

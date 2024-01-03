@@ -6,13 +6,13 @@ using System.Text;
 
 namespace Proje.Stok
 {
-    public class Marka:Kategori
+    public class Marka:Kategori,IMarka
     {
         public string MarkaAd;
         public string KategoriAd;
        
 
-        public void MarkaEke(string MarkaAd,string KategoriAd)
+        void IMarka.MarkaEke(string MarkaAd,string KategoriAd)
         {
             SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-OFK;Initial Catalog=Stok_Takip;Integrated Security=True;Encrypt=False");
 

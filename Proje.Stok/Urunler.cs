@@ -43,6 +43,19 @@ namespace Proje.Stok
             baglanti.Close();
         }
 
+        public void VarOlanUrunEkleDB(int miktar, string barkodno)
+        {
+            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-OFK;Initial Catalog=Stok_Takip;Integrated Security=True;Encrypt=False");
+            baglanti.Open();
+
+            SqlCommand komut = new SqlCommand("update urun set miktar=miktar+'" + (miktar) + "' where barkodno='" + barkodno + "'", baglanti);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            
+
+            
+        }
+
 
 
     }

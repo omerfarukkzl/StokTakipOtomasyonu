@@ -233,6 +233,7 @@
             txtTC.Name = "txtTC";
             txtTC.Size = new Size(125, 27);
             txtTC.TabIndex = 0;
+            txtTC.TextChanged += txtTC_TextChanged;
             // 
             // groupBox2
             // 
@@ -406,6 +407,7 @@
             Name = "frmSatis";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Satış Sayfası";
+            Load += frmSatis_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             groupBox1.ResumeLayout(false);

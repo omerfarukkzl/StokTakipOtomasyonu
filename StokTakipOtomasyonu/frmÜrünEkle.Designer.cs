@@ -46,7 +46,7 @@
             txtBarkodNo = new TextBox();
             groupBox2 = new GroupBox();
             lblMiktar = new Label();
-            button2 = new Button();
+            btnEkleVarOlan = new Button();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
@@ -217,7 +217,7 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(lblMiktar);
-            groupBox2.Controls.Add(button2);
+            groupBox2.Controls.Add(btnEkleVarOlan);
             groupBox2.Controls.Add(label8);
             groupBox2.Controls.Add(label9);
             groupBox2.Controls.Add(label10);
@@ -249,14 +249,15 @@
             lblMiktar.TabIndex = 14;
             lblMiktar.Text = "Güncel Miktar";
             // 
-            // button2
+            // btnEkleVarOlan
             // 
-            button2.Location = new Point(182, 343);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 13;
-            button2.Text = "Ekle";
-            button2.UseVisualStyleBackColor = true;
+            btnEkleVarOlan.Location = new Point(182, 343);
+            btnEkleVarOlan.Name = "btnEkleVarOlan";
+            btnEkleVarOlan.Size = new Size(94, 29);
+            btnEkleVarOlan.TabIndex = 13;
+            btnEkleVarOlan.Text = "Ekle";
+            btnEkleVarOlan.UseVisualStyleBackColor = true;
+            btnEkleVarOlan.Click += btnEkleVarOlan_Click;
             // 
             // label8
             // 
@@ -407,7 +408,7 @@
         private Label label2;
         private Label label1;
         private GroupBox groupBox2;
-        private Button button2;
+        private Button btnEkleVarOlan;
         private Label label8;
         private Label label9;
         private Label label10;
