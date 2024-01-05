@@ -53,6 +53,7 @@
             Name = "frmSatislariListele";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Satışları Listeleme Sayfası";
+            Load += frmSatislariListele_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

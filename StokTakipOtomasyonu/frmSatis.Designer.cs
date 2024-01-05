@@ -319,6 +319,9 @@
             txtMiktar.Name = "txtMiktar";
             txtMiktar.Size = new Size(125, 27);
             txtMiktar.TabIndex = 2;
+            txtMiktar.Text = "1";
+            txtMiktar.TextAlign = HorizontalAlignment.Center;
+            txtMiktar.TextChanged += txtMiktar_TextChanged;
             // 
             // txtUrunAdı
             // 
@@ -333,6 +336,7 @@
             txtBarkodNo.Name = "txtBarkodNo";
             txtBarkodNo.Size = new Size(125, 27);
             txtBarkodNo.TabIndex = 0;
+            txtBarkodNo.TextChanged += txtBarkodNo_TextChanged;
             // 
             // btnEkle
             // 
@@ -342,6 +346,7 @@
             btnEkle.TabIndex = 4;
             btnEkle.Text = "Ekle";
             btnEkle.UseVisualStyleBackColor = true;
+            btnEkle.Click += btnEkle_Click;
             // 
             // btn_SatısYap
             // 
@@ -351,6 +356,7 @@
             btn_SatısYap.TabIndex = 5;
             btn_SatısYap.Text = "Satış Yap";
             btn_SatısYap.UseVisualStyleBackColor = true;
+            btn_SatısYap.Click += btn_SatısYap_Click;
             // 
             // btnSil
             // 
@@ -360,6 +366,7 @@
             btnSil.TabIndex = 6;
             btnSil.Text = "Sil";
             btnSil.UseVisualStyleBackColor = true;
+            btnSil.Click += btnSil_Click;
             // 
             // btnSatisIptal
             // 
@@ -369,24 +376,27 @@
             btnSatisIptal.TabIndex = 7;
             btnSatisIptal.Text = "Satış İptal";
             btnSatisIptal.UseVisualStyleBackColor = true;
+            btnSatisIptal.Click += btnSatisIptal_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(655, 593);
             label1.Name = "label1";
-            label1.Size = new Size(101, 20);
+            label1.Size = new Size(131, 28);
             label1.TabIndex = 8;
             label1.Text = "Genel Toplam";
             // 
             // lblGenelToplam
             // 
             lblGenelToplam.AutoSize = true;
+            lblGenelToplam.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             lblGenelToplam.Location = new Point(794, 593);
             lblGenelToplam.Name = "lblGenelToplam";
-            lblGenelToplam.Size = new Size(50, 20);
+            lblGenelToplam.Size = new Size(52, 28);
             lblGenelToplam.TabIndex = 9;
-            lblGenelToplam.Text = "label2";
+            lblGenelToplam.Text = "0 TL";
             // 
             // frmSatis
             // 
