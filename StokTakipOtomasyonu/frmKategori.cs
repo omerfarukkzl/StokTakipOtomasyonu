@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Proje.StokTakip;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 namespace StokTakipOtomasyonu
 {
     public partial class frmKategori : Form
@@ -19,7 +21,7 @@ namespace StokTakipOtomasyonu
 
         private void btnKategoriEkle_Click(object sender, EventArgs e)
         {
-            Proje.Stok.Kategori entity = new Proje.Stok.Kategori();
+            Proje.StokTakip.Kategori entity = new Proje.StokTakip.Kategori();
 
             entity.KategoriAd = txtKategoriEkle.Text;
 
@@ -28,6 +30,19 @@ namespace StokTakipOtomasyonu
             txtKategoriEkle.Text = "";
 
             MessageBox.Show("Kategori Eklendi");
+        }
+
+        private void frmKategori_Load(object sender, EventArgs e)
+        {
+            Urunler entity = new Urunler();
+            entity.KategoriGetir(cmbKategori);
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            Kategori entity = new Kategori();
+            entity.KategoriSil(cmbKategori);
+            MessageBox.Show("Kategori silindi.");
         }
     }
 }

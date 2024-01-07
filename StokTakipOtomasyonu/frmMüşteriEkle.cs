@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using Proje.Stok;
+
 
 namespace StokTakipOtomasyonu
 {
@@ -19,44 +19,19 @@ namespace StokTakipOtomasyonu
         {
             InitializeComponent();
         }
-
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            Proje.Stok.Musteri entity = new Proje.Stok.Musteri();
+            Proje.StokTakip.Musteri entity = new Proje.StokTakip.Musteri();
 
-            if (long.TryParse(txtTC.Text, out long tcNo))
-            {
-                entity.TcNo = tcNo;
-            }
-            else
-            {
-                MessageBox.Show("TcNo geçerli bir sayı değil.");
-                return;
-            }
+            entity.TcNo = long.Parse(txtTC.Text);
             entity.AdSoyad = txtAdSoyad.Text;
             entity.Telefon = txtTelefon.Text;
             entity.Adres = txtAdres.Text;
             entity.eMail = txtEmail.Text;
 
-            try
-            {
-                using (SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-OFK;Initial Catalog=Stok_Takip;Integrated Security=True;Encrypt=False"))
-                {
-                    entity.MusteriEkleDB(baglanti);
-                }
+            entity.MusteriEkle(entity.TcNo, entity.AdSoyad, entity.Telefon, entity.Adres, entity.eMail);
 
-                MessageBox.Show("Müşteri başarıyla eklendi.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Hata oluştu: {ex.Message}");
-            }
-
-
-
-
-
-
+            MessageBox.Show("Müşteri Eklendi.");
 
         }
     }

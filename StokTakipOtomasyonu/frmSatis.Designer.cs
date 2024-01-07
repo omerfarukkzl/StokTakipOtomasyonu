@@ -33,10 +33,9 @@
             btnMarkaListele = new Button();
             btnKategoriListele = new Button();
             btnSatislariListele = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnUrunListeleme = new Button();
+            btnMusteriListele = new Button();
+            btnMusteriEkle = new Button();
             groupBox1 = new GroupBox();
             lblTelefon = new Label();
             lblAdSoyad = new Label();
@@ -61,6 +60,7 @@
             btnSatisIptal = new Button();
             label1 = new Label();
             lblGenelToplam = new Label();
+            btnUrunEkleme = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -81,13 +81,13 @@
             // panel1
             // 
             panel1.BackColor = Color.DarkGray;
+            panel1.Controls.Add(btnUrunEkleme);
             panel1.Controls.Add(btnMarkaListele);
             panel1.Controls.Add(btnKategoriListele);
             panel1.Controls.Add(btnSatislariListele);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnUrunListeleme);
+            panel1.Controls.Add(btnMusteriListele);
+            panel1.Controls.Add(btnMusteriEkle);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -127,49 +127,38 @@
             btnSatislariListele.UseVisualStyleBackColor = true;
             btnSatislariListele.Click += btnSatislariListele_Click;
             // 
-            // button4
+            // btnUrunListeleme
             // 
-            button4.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(625, 35);
-            button4.Name = "button4";
-            button4.Size = new Size(155, 62);
-            button4.TabIndex = 3;
-            button4.Text = "Ürün Listeleme";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            btnUrunListeleme.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUrunListeleme.Location = new Point(625, 35);
+            btnUrunListeleme.Name = "btnUrunListeleme";
+            btnUrunListeleme.Size = new Size(155, 62);
+            btnUrunListeleme.TabIndex = 3;
+            btnUrunListeleme.Text = "Ürün Listeleme";
+            btnUrunListeleme.UseVisualStyleBackColor = true;
+            btnUrunListeleme.Click += btnUrunListeleme_Click;
             // 
-            // button3
+            // btnMusteriListele
             // 
-            button3.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(464, 35);
-            button3.Name = "button3";
-            button3.Size = new Size(155, 62);
-            button3.TabIndex = 2;
-            button3.Text = "Ürün Ekleme";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnMusteriListele.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMusteriListele.Location = new Point(228, 35);
+            btnMusteriListele.Name = "btnMusteriListele";
+            btnMusteriListele.Size = new Size(155, 62);
+            btnMusteriListele.TabIndex = 1;
+            btnMusteriListele.Text = "Müşteri Listeleme";
+            btnMusteriListele.UseVisualStyleBackColor = true;
+            btnMusteriListele.Click += btnMusteriListeleme_Click;
             // 
-            // button2
+            // btnMusteriEkle
             // 
-            button2.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(228, 35);
-            button2.Name = "button2";
-            button2.Size = new Size(155, 62);
-            button2.TabIndex = 1;
-            button2.Text = "Müşteri Listeleme";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(67, 35);
-            button1.Name = "button1";
-            button1.Size = new Size(155, 62);
-            button1.TabIndex = 0;
-            button1.Text = "Müşteri Ekleme";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnMusteriEkle.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMusteriEkle.Location = new Point(67, 35);
+            btnMusteriEkle.Name = "btnMusteriEkle";
+            btnMusteriEkle.Size = new Size(155, 62);
+            btnMusteriEkle.TabIndex = 0;
+            btnMusteriEkle.Text = "Müşteri Ekleme";
+            btnMusteriEkle.UseVisualStyleBackColor = true;
+            btnMusteriEkle.Click += btnMusteriEkle_Click;
             // 
             // groupBox1
             // 
@@ -398,6 +387,17 @@
             lblGenelToplam.TabIndex = 9;
             lblGenelToplam.Text = "0 TL";
             // 
+            // btnUrunEkleme
+            // 
+            btnUrunEkleme.Font = new Font("Segoe UI Black", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUrunEkleme.Location = new Point(450, 35);
+            btnUrunEkleme.Name = "btnUrunEkleme";
+            btnUrunEkleme.Size = new Size(155, 62);
+            btnUrunEkleme.TabIndex = 7;
+            btnUrunEkleme.Text = "Ürün Ekleme";
+            btnUrunEkleme.UseVisualStyleBackColor = true;
+            btnUrunEkleme.Click += btnUrunEkleme_Click;
+            // 
             // frmSatis
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -455,13 +455,14 @@
         private Button btnSil;
         private Button btnSatisIptal;
         private Button btnSatislariListele;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnUrunListeleme;
+      
+        private Button btnMusteriListele;
+        private Button btnMusteriEkle;
         private Label label1;
         private Label lblGenelToplam;
         private Button btnMarkaListele;
         private Button btnKategoriListele;
+        private Button btnUrunEkleme;
     }
 }

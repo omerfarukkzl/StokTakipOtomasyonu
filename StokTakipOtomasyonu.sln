@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StokTakipOtomasyonu", "StokTakipOtomasyonu\StokTakipOtomasyonu.csproj", "{EA0898B7-8FD9-4608-A5BA-DFB3D530AC29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proje.Stok", "Proje.Stok\Proje.Stok.csproj", "{0A8481C2-1AA3-4D96-91EF-828DBCC9110B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proje.StokTakip", "Proje.StokTakip\Proje.StokTakip.csproj", "{0F887517-6F0B-4D1B-B059-8D512604FBE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{EA0898B7-8FD9-4608-A5BA-DFB3D530AC29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA0898B7-8FD9-4608-A5BA-DFB3D530AC29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA0898B7-8FD9-4608-A5BA-DFB3D530AC29}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A8481C2-1AA3-4D96-91EF-828DBCC9110B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A8481C2-1AA3-4D96-91EF-828DBCC9110B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A8481C2-1AA3-4D96-91EF-828DBCC9110B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A8481C2-1AA3-4D96-91EF-828DBCC9110B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F887517-6F0B-4D1B-B059-8D512604FBE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F887517-6F0B-4D1B-B059-8D512604FBE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F887517-6F0B-4D1B-B059-8D512604FBE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F887517-6F0B-4D1B-B059-8D512604FBE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

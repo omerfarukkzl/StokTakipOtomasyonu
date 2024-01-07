@@ -31,6 +31,9 @@
             txtKategoriEkle = new TextBox();
             btnKategoriEkle = new Button();
             label1 = new Label();
+            cmbKategori = new ComboBox();
+            btnSil = new Button();
+            label2 = new Label();
             SuspendLayout();
             // 
             // txtKategoriEkle
@@ -59,18 +62,49 @@
             label1.TabIndex = 2;
             label1.Text = "Kategori";
             // 
+            // cmbKategori
+            // 
+            cmbKategori.FormattingEnabled = true;
+            cmbKategori.Location = new Point(159, 303);
+            cmbKategori.Name = "cmbKategori";
+            cmbKategori.Size = new Size(125, 28);
+            cmbKategori.TabIndex = 3;
+            // 
+            // btnSil
+            // 
+            btnSil.Location = new Point(190, 346);
+            btnSil.Name = "btnSil";
+            btnSil.Size = new Size(94, 29);
+            btnSil.TabIndex = 4;
+            btnSil.Text = "Sil";
+            btnSil.UseVisualStyleBackColor = true;
+            btnSil.Click += btnSil_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(67, 306);
+            label2.Name = "label2";
+            label2.Size = new Size(86, 20);
+            label2.TabIndex = 5;
+            label2.Text = "Kategori Sil";
+            // 
             // frmKategori
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             ClientSize = new Size(383, 452);
+            Controls.Add(label2);
+            Controls.Add(btnSil);
+            Controls.Add(cmbKategori);
             Controls.Add(label1);
             Controls.Add(btnKategoriEkle);
             Controls.Add(txtKategoriEkle);
             Name = "frmKategori";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Kategori Ekleme Sayfası";
+            Load += frmKategori_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -80,5 +114,8 @@
         private TextBox txtKategoriEkle;
         private Button btnKategoriEkle;
         private Label label1;
+        private ComboBox cmbKategori;
+        private Button btnSil;
+        private Label label2;
     }
 }

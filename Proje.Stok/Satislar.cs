@@ -13,10 +13,7 @@ namespace Proje.Stok
         public decimal ToplamTutar { get; set; }
         public List<Urunler> SatislarListesi { get; set; }
 
-        public override void MusteriEkleDB(SqlConnection connection)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 
 }

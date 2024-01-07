@@ -64,7 +64,7 @@
             txtEmail.Location = new Point(259, 252);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(125, 27);
-            txtEmail.TabIndex = 2;
+            txtEmail.TabIndex = 4;
             // 
             // txtAdres
             // 
@@ -78,14 +78,14 @@
             txtTelefon.Location = new Point(259, 164);
             txtTelefon.Name = "txtTelefon";
             txtTelefon.Size = new Size(125, 27);
-            txtTelefon.TabIndex = 4;
+            txtTelefon.TabIndex = 2;
             // 
             // txtAdSoyad
             // 
             txtAdSoyad.Location = new Point(259, 120);
             txtAdSoyad.Name = "txtAdSoyad";
             txtAdSoyad.Size = new Size(125, 27);
-            txtAdSoyad.TabIndex = 5;
+            txtAdSoyad.TabIndex = 1;
             // 
             // groupBox1
             // 

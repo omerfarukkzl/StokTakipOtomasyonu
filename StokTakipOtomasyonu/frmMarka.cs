@@ -1,4 +1,5 @@
-﻿using Proje.Stok;
+﻿
+using Proje.StokTakip;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,27 +23,15 @@ namespace StokTakipOtomasyonu
 
         private void frmMarka_Load(object sender, EventArgs e)
         {
-            KategoriGetir();
+            Urunler entity = new Urunler();
+            entity.KategoriGetir(cmbKategoriSec);
+            
 
         }
-
-        private void KategoriGetir()
-        {
-            baglanti.Open();
-
-            SqlCommand komut = new SqlCommand("select *from kategoribilgileri", baglanti);
-            SqlDataReader reader = komut.ExecuteReader();
-
-            while (reader.Read())
-            {
-                cmbKategoriSec.Items.Add(reader["kategori"].ToString());
-            }
-            baglanti.Close();
-        }
-
+     
         private void btnMarkaEkle_Click(object sender, EventArgs e)
         {
-            Proje.Stok.Marka entity = new Proje.Stok.Marka();
+            Marka entity = new Marka();
 
             entity.MarkaAd = txtMarka.Text;
             entity.KategoriAd = cmbKategoriSec.Text;
